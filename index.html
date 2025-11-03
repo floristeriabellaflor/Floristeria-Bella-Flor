@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Floristería Bella Flor — Profesional</title>
+  <meta name="description" content="Floristería Bella Flor — arreglos, eventos, suscripciones y entregas. Calidad y diseño en cada ramo." />
+  <link rel="stylesheet" href="estilos.css">
+  <!-- script.js con defer para que el DOM esté listo -->
+  <script src="Script.js" defer></script>
+</head>
+<body>
+  <!-- Skip link accesible -->
+  
+
+  <!-- HEADER -->
+  <header id="site-header" class="header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio">
+        <img src="logo.png" alt="Logo Bella Flor" class="logo" />
+        
+      </a>
+
+      <button id="btn-menu" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+
+      <nav id="main-nav" class="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#colecciones">Colecciones</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#testimonios">Opiniones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="buscarBtn" class="icon-btn" aria-label="Buscar">🔍</button>
+        <button id="carritoToggle" class="icon-btn" aria-label="Abrir carrito">🛒 <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main" class="main">
+    <!-- HERO / Bienvenida -->
+    <section id="inicio" class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Flores que cuentan historias</h1>
+          <p class="lead">
+            En <strong>Bella Flor</strong> diseñamos arreglos con flores frescas y atención personalizada desde 2008.
+            Envíos rápidos, decoración para eventos y suscripciones mensuales.
+          </p>
+          <p class="hero-cta">
+            <a href="#productos" class="btn-primary">Ver catálogo</a>
+            <a href="#servicios" class="btn-outline">Nuestros servicios</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <img src="fondo.png" alt="Arreglo de flores Bella Flor">
+        </div>
+      </div>
+
+      <!-- historia breve -->
+      <div class="historia">
+        <h2>Nuestra historia</h2>
+        <p>
+          Comenzamos como un pequeño local familiar y hoy colaboramos con bodas, empresas y clientes que buscan calidad.
+          Cada arreglo se trabaja con flores colombianas de temporada, empaques sostenibles y entrega puntual.
+        </p>
+      </div>
+    </section>
+
+    <!-- COLECCIONES DESTACADAS -->
+    <section id="colecciones" class="colecciones">
+      <h2>Colecciones destacadas</h2>
+      <div class="colecciones-grid">
+        <article class="coleccion">
+          <img src="img/bodas.jpg" alt="Colección Bodas">
+          <h3>Bodas & Eventos</h3>
+          <p>Diseños para ceremonias y recepciones, packs y asesoría en sitio.</p>
+          <a href="#servicios" class="link-small">Ver servicios</a>
+        </article>
+
+        <article class="coleccion">
+          <img src="img/entrega.jpg" alt="Suscripción">
+          <h3>Suscripción</h3>
+          <p>Recibe flores frescas semanal o mensualmente. Planes corporativos.</p>
+          <a href="#contacto" class="link-small">Suscríbete</a>
+        </article>
+
+        <article class="coleccion">
+          <img src="img/eternas.jpg" alt="Rosas eternas">
+          <h3>Rosas eternas</h3>
+          <p>Preservadas que duran años, packaging premium para regalos.</p>
+          <a href="#productos" class="link-small">Comprar</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FILTROS Y CATALOGO -->
+    <section id="productos" class="productos">
+      <div class="section-head">
+        <h2>Catálogo</h2>
+        <div class="productos-controls">
+          <div class="filtros">
+            <label for="filtro-cat">Categoría</label>
+            <select id="filtro-cat">
+              <option value="all">Todas</option>
+              <option value="ramos">Ramos</option>
+              <option value="centros">Centros de mesa</option>
+              <option value="eternas">Rosas eternas</option>
+              <option value="canastas">Canastas</option>
+            </select>
+          </div>
+          <div class="orden">
+            <label for="ordenar">Ordenar</label>
+            <select id="ordenar">
+              <option value="popular">Más populares</option>
+              <option value="precio-asc">Precio: bajo a alto</option>
+              <option value="precio-desc">Precio: alto a bajo</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="galeria" id="galeria-productos">
+        <!-- Producto (ejemplo) - usar data-attributes para JS -->
+        <article class="producto-card" data-category="ramos" data-name="Ramo de Rosas Rojas" data-price="80000" data-img="rosas.jpg">
+          <div class="producto-media">
+            <img src="rosas.jpg" alt="Ramo de Rosas Rojas">
+            <button class="quick-view" aria-label="Vista rápida">Ver</button>
+          </div>
+          <div class="producto-body">
+            <h3 class="producto-title">Ramo de Rosas Rojas</h3>
+            <p class="producto-desc">Rosas frescas seleccionadas, presentación clásica.</p>
+            <div class="producto-meta">
+              <span class="precio">80.000 COP</span>
+              <button class="btn-small add-to-cart">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="producto-card" data-category="ramos" data-name="Arreglo Mixto Vibrante" data-price="95000" data-img="mixto.jpg">
+          <div class="producto-media">
+            <img src="mixto.jpg" alt="Arreglo Mixto Vibrante">
+            <button class="quick-view" aria-label="Vista rápida">Ver</button>
+          </div>
+          <div class="producto-body">
+            <h3 class="producto-title">Arreglo Mixto Vibrante</h3>
+            <p class="producto-desc">Flores de temporada en colores vivos.</p>
+            <div class="producto-meta">
+              <span class="precio">95.000 COP</span>
+              <button class="btn-small add-to-cart">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="producto-card" data-category="centros" data-name="Centro de Mesa Elegante" data-price="120000" data-img="decorativo.jpg">
+          <div class="producto-media">
+            <img src="decorativo.jpg" alt="Centro de Mesa Elegante">
+            <button class="quick-view" aria-label="Vista rápida">Ver</button>
+          </div>
+          <div class="producto-body">
+            <h3 class="producto-title">Centro de Mesa Elegante</h3>
+            <p class="producto-desc">Diseño para banquetes y mesas principales.</p>
+            <div class="producto-meta">
+              <span class="precio">120.000 COP</span>
+              <button class="btn-small add-to-cart">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="producto-card" data-category="eternas" data-name="Caja Rosas Eternas" data-price="150000" data-img="rosas-eternas.jpg">
+          <div class="producto-media">
+            <img src="eternas2.jpg" alt="Caja Rosas Eternas">
+            <button class="quick-view" aria-label="Vista rápida">Ver</button>
+          </div>
+          <div class="producto-body">
+            <h3 class="producto-title">Caja Rosas Eternas</h3>
+            <p class="producto-desc">Preservadas con caja premium.</p>
+            <div class="producto-meta">
+              <span class="precio">150.000 COP</span>
+              <button class="btn-small add-to-cart">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Más productos pueden añadirse aquí siguiendo el mismo patrón -->
+      </div>
+    </section>
+
+    <!-- PRODUCT MODAL (vista rápida / compra) -->
+    <div id="productModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+      <div class="modal-panel">
+        <button class="modal-close" aria-label="Cerrar">×</button>
+        <div class="modal-grid">
+          <div class="modal-media">
+            <img id="modalImg" src="" alt="">
+          </div>
+          <div class="modal-info">
+            <h3 id="modalTitle">Título producto</h3>
+            <p id="modalDesc">Descripción breve y completa del producto.</p>
+            <p class="modal-price" id="modalPrice">0 COP</p>
+
+            <div class="modal-actions">
+              <label for="cantidad">Cantidad</label>
+              <input id="cantidad" type="number" min="1" value="1">
+              <button id="modalAddToCart" class="btn-primary">Agregar al carrito</button>
+              <button id="modalComprar" class="btn-outline">Comprar ahora</button>
+            </div>
+
+            <div id="metodosPagoInline" class="metodos-pago" aria-hidden="true">
+              <h4>Métodos de pago</h4>
+              <ul>
+                <li><img src="logo-nequi.png" alt="Nequi logo"> Nequi</li>
+                <li><img src="logo-daviplata.png" alt="Daviplata logo"> Daviplata</li>
+                <li><img src="logo-bancolombia.png" alt="Bancolombia logo"> Transferencia Bancaria (Bancolombia)</li>
+                <li><img src="logo-card.png" alt="Tarjeta logo"> Tarjeta Crédito/Débito</li>
+              </ul>
+            </div>
+
+            <p class="modal-note">Envío en 24-48 horas dentro de la ciudad. Empaque sostenible incluido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CARRITO LATERAL -->
+    <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+      <div class="cart-head">
+        <h3>Tu carrito</h3>
+        <button id="closeCart" aria-label="Cerrar carrito">×</button>
+      </div>
+      <ul id="cartItems" class="cart-items">
+        <!-- items generados con JS -->
+      </ul>
+      <div class="cart-footer">
+        <p class="cart-total">Total: <span id="cartTotal">0</span> COP</p>
+        <button id="checkout-btn" class="btn-primary">Proceder al pago</button>
+        <button id="vaciarCarrito" class="btn-outline">Vaciar carrito</button>
+      </div>
+
+
+
+    </aside>
+
+    <!-- SERVICIOS / RESERVACIONES -->
+    <section id="servicios" class="servicios">
+      <h2>Servicios</h2>
+      <div class="servicios-grid">
+        <article>
+          <h3>Decoración para eventos</h3>
+          <p>Asesoría completa: diseño, montaje y logística floral para bodas, lanzamientos y eventos corporativos.</p>
+        </article>
+        <article>
+          <h3>Reservaciones y pedidos grandes</h3>
+          <p>Reserva con anticipación para fechas especiales (día de la madre, san valentín). Pedidos grandes o corporativos con descuentos y facturación.</p>
+        </article>
+        <article>
+          <h3>Suscripciones</h3>
+          <p>Planes semanales o mensuales con entrega programada. Ideal para oficinas y regalos continuos.</p>
+        </article>
+        <article>
+          <h3>Asesoría personalizada</h3>
+          <p>Consulta telefónica o en tienda para crear arreglos a medida según estilo y presupuesto.</p>
+        </article>
+      </div>
+
+      <div class="reservacion-call">
+        <h4>¿Necesitas reservar?</h4>
+        <p>Escríbenos al WhatsApp o completa el formulario de contacto indicando fecha, tipo de evento y cantidad estimada — te responderemos con cotización y opciones.</p>
+        <br>
+        <a href="#contacto" class="btn-outline">Formulario de contacto</a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonios-list">
+        <blockquote>
+          <p>“Servicio impecable y flores hermosas. Llegó a tiempo y en perfecto estado.”</p>
+          <cite>— Ana P.</cite>
+        </blockquote>
+        <blockquote>
+          <p>“Contratamos a Bella Flor para nuestra boda: la decoración fue espectacular.”</p>
+          <cite>— Javier & Laura</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACTO / FORMULARIO -->
+    <section id="contacto" class="contacto">
+      
+      <div class="contact-grid">
+
+        <form id="contactForm" class="contact-form">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" required>
+
+          <label for="email">Correo</label>
+          <input id="email" type="email" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" rows="4" required></textarea>
+
+          <label for="fecha">Fecha deseada (reservación)</label>
+          <input id="fecha" type="date">
+
+          <button type="submit" class="btn-primary">Enviar mensaje</button>
+        </form>
+
+        <div class="contact-info">
+          <h2>Contacto</h2>
+          <br>
+          <p><strong>Teléfono:</strong> +57 312 2627207</p>
+          <p><strong>Email:</strong> sac@bellaflor.com</p>
+          <p><strong>Dirección:</strong> CRA 18E #7-26, Guabinas</p>
+
+          <div class="newsletter">
+            <h4>Suscríbete al boletín</h4>
+            <form id="newsletterForm">
+              <input id="newsletterEmail" type="email" placeholder="Tu correo" required>
+              <button type="submit" class="btn-outline">Suscribirme</button>
+            </form>
+            <p class="newsletter-note">Descuentos y novedades mensuales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Acerca</h4>
+        <p>Bella Flor — calidad y diseño floral desde 2008. Envíos en toda la ciudad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="#politicas">Políticas</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#trabaja">Trabaja con nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Métodos de pago</h4>
+        <div class="metodos-pago">
+          <img src="nequi.png" alt="Nequi">
+          <img src="bancolombia.png" alt="Bancolombia">
+          <img src="card.png" alt="Tarjetas">
+          <img src="card2.png" alt="Tarjetas2">
+        </div>
+      </div>
+    </div>
+    <center><p class="copyright">© 2025 Floristería Bella Flor — Todos los derechos reservados.</p> </center>
+  </footer>
+
+  <!-- Modal Checkout -->
+<div id="checkout-modal" class="modal">
+  <div class="modal-panel">
+    <button class="modal-close" id="close-checkout">&times;</button>
+    <h2>Finalizar Compra</h2>
+
+    <form id="checkout-form">
+      <label>Método de pago:</label>
+      <select id="payment-method" required>
+        <option value="">Seleccione...</option>
+        <option value="tarjeta">Tarjeta de crédito / débito</option>
+        <option value="nequi">Nequi</option>
+        <option value="contraentrega">Pago contraentrega</option>
+      </select>
+
+      <label>Nombre completo:</label>
+      <input type="text" id="customer-name" required>
+
+      <label>Correo electrónico:</label>
+      <input type="email" id="customer-email" required>
+
+      <label>Dirección de entrega:</label>
+      <input type="text" id="customer-address" required>
+
+      <button type="submit" class="btn-primary">Confirmar compra</button>
+    </form>
+  </div>
+</div>
+
+<!-- ------------------------------
+     Modal Checkout
+------------------------------ -->
+<div class="modal" id="checkout-modal">
+  <div class="modal-panel">
+    <button class="modal-close" id="close-checkout">✕</button>
+    <h2>Finalizar Compra</h2>
+
+    <!-- Resumen dinámico del carrito -->
+    <div id="checkout-summary" class="checkout-summary"></div>
+
+    <!-- Formulario -->
+    <form id="checkout-form">
+      <div class="form-group">
+        <label for="customer-name">Nombre completo</label>
+        <input type="text" id="customer-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="customer-email">Correo electrónico</label>
+        <input type="email" id="customer-email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="customer-address">Dirección de entrega</label>
+        <input type="text" id="customer-address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="payment-method">Método de pago</label>
+        <select id="payment-method" required>
+          <option value="">-- Selecciona una opción --</option>
+          <option value="Nequi">Nequi</option>
+          <option value="Daviplata">Daviplata</option>
+          <option value="PSE">PSE</option>
+          <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+          <option value="Contraentrega">Contraentrega</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary full">Confirmar Compra</button>
+    </form>
+  </div>
+</div>
+
+<!-- ------------------------------
+     Modal Compra Exitosa
+------------------------------ -->
+<div class="modal" id="success-modal">
+  <div class="modal-panel success">
+    <button class="modal-close" id="close-success">✕</button>
+    <h2>✅</h2>
+    <h2>¡Compra Exitosa!</h2>
+    <p>Gracias por tu pedido. Te enviaremos un correo con los detalles de la compra.</p>
+    <button class="btn-primary" id="close-success-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+</body>
+</html>
