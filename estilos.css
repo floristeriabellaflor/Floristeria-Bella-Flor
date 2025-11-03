@@ -1,0 +1,792 @@
+/* ------------------------------
+   Reset básico y tipografía
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+  padding-top: 80px; /* deja espacio para el header fijo */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------------------
+   Colores y variables
+------------------------------ */
+:root {
+  --rosa-claro: #f8bbd0;
+  --rosa-medio: #f48fb1;
+  --rosa-fuerte: #ec407a;
+  --gris: #444;
+  --blanco: #fff;
+  --sombra: rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------
+   Header y navegación
+------------------------------ */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, var(--rosa-fuerte), var(--rosa-claro));
+  color: var(--blanco);
+  z-index: 1000;
+  box-shadow: 0 2px 6px var(--sombra);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand img.logo {
+  height: 40px;
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Nav */
+.nav ul {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav a {
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px var(--sombra);
+}
+
+/* Header acciones */
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ------------------------------
+   Hero
+------------------------------ */
+.hero {
+  padding: 3rem 1rem;
+  background: linear-gradient(120deg, var(--rosa-claro), var(--rosa-medio));
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--rosa-fuerte);
+}
+
+.hero-text .lead {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 0.7rem 1.3rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--rosa-fuerte);
+  color: var(--blanco);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #d81b60;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--rosa-fuerte);
+  color: var(--rosa-fuerte);
+}
+
+.btn-outline:hover {
+  background: var(--rosa-fuerte);
+  color: var(--blanco);
+  transform: translateY(-2px);
+}
+
+/* Historia */
+.historia {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.historia h2 {
+  margin-bottom: 0.5rem;
+  color: var(--rosa-fuerte);
+}
+
+/* ------------------------------
+   Colecciones
+------------------------------ */
+.colecciones {
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.colecciones h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--rosa-fuerte);
+}
+
+.colecciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coleccion {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--sombra);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.coleccion:hover {
+  transform: translateY(-5px);
+}
+
+.coleccion img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.coleccion h3 {
+  padding: 1rem;
+  color: var(--rosa-fuerte);
+}
+
+/* ------------------------------
+   Catálogo
+------------------------------ */
+.productos {
+  padding: 3rem 1rem;
+  background: var(--rosa-claro);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  flex-wrap: wrap;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.producto-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--sombra);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-media {
+  position: relative;
+}
+
+.quick-view {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--rosa-fuerte);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.producto-media:hover .quick-view {
+  opacity: 1;
+}
+
+.producto-body {
+  padding: 1rem;
+}
+
+.producto-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--gris);
+}
+
+.precio {
+  font-weight: bold;
+  color: var(--rosa-fuerte);
+}
+
+/* ------------------------------
+   Modal producto
+------------------------------ */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-panel {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90%;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  float: right;
+  cursor: pointer;
+}
+
+.modal-price {
+  font-size: 1.2rem;
+  color: var(--rosa-fuerte);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.metodos-pago {
+  margin-top: 1rem;
+  background: var(--rosa-claro);
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.metodos-pago h4 {
+  margin-bottom: 0.5rem;
+}
+
+.metodos-pago ul {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* ------------------------------
+   Carrito lateral
+------------------------------ */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 6px var(--sombra);
+  z-index: 2100;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-head {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-items {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.cart-footer {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+/* ------------------------------
+   Servicios
+------------------------------ */
+.servicios {
+  padding: 3rem 1rem;
+}
+
+.servicios h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--rosa-fuerte);
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reservacion-call {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ------------------------------
+   Testimonios
+------------------------------ */
+.testimonios {
+  background: var(--rosa-medio);
+  padding: 3rem 1rem;
+  color: #fff;
+}
+
+.testimonios h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonios-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ------------------------------
+   Contacto
+------------------------------ */
+.contacto {
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.newsletter {
+  margin-top: 2rem;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 0.6rem;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+.site-footer {
+  background: var(--rosa-fuerte);
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  margin-bottom: 0.8rem;
+}
+
+.payment-logos img {
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+/* ------------------------------
+   Utilidades
+------------------------------ */
+.btn-small {
+  background: var(--rosa-fuerte);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-small:hover {
+  transform: scale(1.05);
+}
+
+.link-small {
+  font-size: 0.9rem;
+  color: var(--rosa-fuerte);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+/* ------------------------------
+   Responsivo
+------------------------------ */
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--rosa-fuerte);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  color: var(--rosa-fuerte);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.remove-item:hover {
+  transform: scale(1.2);
+  color: #d81b60;
+}
+
+
+/* ------------------------------
+   Checkout Modal
+------------------------------ */
+#checkout-modal .modal-panel {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+#checkout-modal h2 {
+  text-align: center;
+  color: var(--rosa-fuerte);
+  margin-bottom: 1.5rem;
+}
+
+#checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#checkout-form label {
+  font-weight: 600;
+  color: var(--gris);
+}
+
+#checkout-form input,
+#checkout-form select {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+#checkout-form input:focus,
+#checkout-form select:focus {
+  outline: none;
+  border-color: var(--rosa-fuerte);
+  box-shadow: 0 0 0 3px rgba(236, 64, 122, 0.2);
+}
+
+#checkout-form button {
+  background: linear-gradient(90deg, var(--rosa-fuerte), var(--rosa-medio));
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#checkout-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+#close-checkout {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--rosa-fuerte);
+  transition: transform 0.2s;
+}
+
+#close-checkout:hover {
+  transform: scale(1.2);
+  color: #d81b60;
+}
+
+/* Animación */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Modal Confirmación */
+#confirmacion-modal .modal-panel {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+#confirmacion-modal h2 {
+  color: var(--rosa-fuerte);
+  margin-bottom: 1rem;
+}
+
+#resumen-compra {
+  text-align: left;
+  margin: 1rem 0;
+  background: #fff5f8;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#resumen-compra ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+/* Centrar texto dentro del modal */
+.modal-panel {
+  text-align: center; /* centra el texto y elementos */
+}
+
+.modal-panel p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.metodos-pago img {
+  width: 80px;   /* ajusta el tamaño según te guste */
+  height: 40px;  /* fuerza altura para todas iguales */
+  object-fit: contain; /* mantiene proporción sin deformar */
+  margin-right: 8px;
+}
+
+
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0;
+}
+
+.hero-text {
+  flex: 0 0 50%; /* El texto ocupa la mitad izquierda fija */
+  padding: 3rem; /* Ajusta espacio interno si quieres */
+}
+
+.hero-media {
+  flex: 1; /* La imagen ocupa el resto */
+  margin: 0;
+  padding: 0;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: right; /* Se pega bien al borde derecho */
+}
+
+
+.hero-media {
+  flex: none;             /* rompe el cálculo automático */
+  width: 50vw;            /* la mitad exacta de la pantalla */
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+html, body {
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
